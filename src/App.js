@@ -1,27 +1,29 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, View, FlatList} from 'react-native';
 import ListItem from './components/ListItem';
+import articles from './components/dummies/articles.json';
 
 const App = () => {
   return (
-    <>
-      <SafeAreaView />
-      <View style={styles.container}>
-        <ListItem
-          author="sample news"
-          title="hello!!hello!!hello!!hello!!hello!!hello!!hello!!hello!! hello!!
-          hello!! hello!! hello!! hello!! hello!! hello!! hello!! hello!!"
-          url="https://picsum.photos/id/237/200/200"
-        />
-      </View>
-    </>
+    <SafeAreaView style={styles.container}>
+      <FlatList
+        data={articles}
+        renderItem={({item}) => (
+          <ListItem
+            url={item.urlToImage}
+            title={item.title}
+            author={item.author}
+          />
+        )}
+        kyyExtractor={(index) => index.toString()}
+      />
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
   },
 });

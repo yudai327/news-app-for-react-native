@@ -4,4 +4,6 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   semi: true,
+  wrapAttributes: true,
+  wrapLineLength: 80,
 };
