@@ -1,4 +1,5 @@
 {
   "name": "NewsApp",
-  "displayName": "NewsApp"
+  "displayName": "NewsApp",
+  "newsApiKey": "b312568ee7b8489ab483d2eec5535c4f"
 }

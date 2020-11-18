@@ -25,7 +25,9 @@ const ListItem = ({url, title, author}) => {
   return (
     <View style={styles.itemContainer}>
       <View style={styles.itemLeftContainer}>
-        <Image style={{width: 100, height: 100}} source={{uri: url}} />
+        {!!url && (
+          <Image style={{width: 100, height: 100}} source={{uri: url}} />
+        )}
       </View>
       <View style={styles.itemRightContainer}>
         <Text>{title}</Text>
