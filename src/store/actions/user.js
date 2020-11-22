@@ -1,13 +1,13 @@
 export const addClip = ({clip}) => {
   return {
-    type: 'ADD_CLOP',
-    clip: clip,
+    type: 'ADD_CLIP',
+    clip,
   };
 };
 
 export const deleteClip = ({clip}) => {
   return {
-    type: 'DELETE_CLOP',
-    clip: clip,
+    type: 'DELETE_CLIP',
+    clip,
   };
 };
