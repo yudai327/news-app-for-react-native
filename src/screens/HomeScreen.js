@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {SafeAreaView, StyleSheet, FlatList, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, FlatList} from 'react-native';
 import ListItem from '../components/ListItem';
 import {newsApiKey} from '../../app.json';
 import axios from 'axios';
@@ -20,6 +20,7 @@ const HomeScreen = ({navigation}) => {
       console.error(error);
     }
   };
+  console.log(articles);
   return (
     <SafeAreaView style={styles.container}>
       <FlatList

@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
 });
 
 const ListItem = ({url, title, author, onPress}) => {
+  console.log(title);
   return (
     <TouchableOpacity style={styles.itemContainer} onPress={onPress}>
       <View style={styles.itemLeftContainer}>
